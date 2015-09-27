@@ -16,7 +16,7 @@ var tpl = fs.readFileSync(filepath, 'utf8');
 var key = path.relative(process.cwd(), filepath);
 // TODO supports namespace as 'exports' so we can use compiled javascript as a
 // module in nodejs.
-var namespace = 'window[JST]';
+var namespace = "window['JST']";
 
 // for testing
 if (process.env.TEST){
