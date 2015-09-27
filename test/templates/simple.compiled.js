@@ -1,4 +1,4 @@
-window[JST]['../test/templates/simple.tpl'] = function(obj){
+window[JST]['test/templates/simple.tpl'] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
 __p+='<h1>'+

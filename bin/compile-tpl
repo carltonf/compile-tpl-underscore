@@ -13,7 +13,7 @@ fs.accessSync(filepath);
 var tpl = fs.readFileSync(filepath, 'utf8');
 
 // use relative path name as key
-var key = path.relative(__dirname, filepath);
+var key = path.relative(process.cwd(), filepath);
 // TODO supports namespace as 'exports' so we can use compiled javascript as a
 // module in nodejs.
 var namespace = 'window[JST]';

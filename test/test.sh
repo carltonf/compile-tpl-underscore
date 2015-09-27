@@ -3,10 +3,12 @@
 echo "*** Raw test to see whether read/write file is ok.
 *** Very very simple: if you see no diff output, the test passes."
 
-cd test/templates/
+TPL=test/templates/simple.tpl
+TPL_TMP=test/templates/simple.tmp.js
+TPL_EXPECTED=test/templates/simple.compiled.js
 
-../../bin/compile-tpl simple.tpl > simple.tmp.js
+./bin/compile-tpl ${TPL} > ${TPL_TMP}
 
-diff -Npur simple.tmp.js simple.compiled.js
+diff -Npur ${TPL_EXPECTED} ${TPL_TMP}
 
-rm -v simple.tmp.js
+rm -v ${TPL_TMP}
