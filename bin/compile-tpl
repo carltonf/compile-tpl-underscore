@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var compiler = require('../');
+
+var fs = require('fs');
+var path = require('path');
+
+var filepath = process.argv[2];
+if (!filepath){
+  throw "Error: no filepath!";
+}
+fs.accessSync(filepath);
+var tpl = fs.readFileSync(filepath, 'utf8');
+
+// use relative path name as key
+var key = path.relative(__dirname, filepath);
+// TODO supports namespace as 'exports' so we can use compiled javascript as a
+// module in nodejs.
+var namespace = 'window[JST]';
+
+// for testing
+if (process.env.TEST){
+  namespace = null;
+}
+
+console.log(compiler(tpl, namespace, key));

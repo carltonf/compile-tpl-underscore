@@ -1,0 +1,24 @@
+{
+  "name": "compile-underscore-tpl",
+  "version": "0.0.1",
+  "description": "Compile underscore template file.",
+  "scripts": {
+    "test-raw": "test/test.sh",
+    "test": "TEST=1 mocha"
+  },
+  "main": "index.js",
+  "author": "Carl Xiong(xiongc05@gmail.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  },
+  "bin": {
+    "compile-tpl": "./bin/compile-tpl"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
