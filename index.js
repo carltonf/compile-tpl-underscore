@@ -8,6 +8,6 @@ module.exports = (template, namespace, key) => {
     // needs wrapping parentheses.
     return `(${compiled})`;
   }else{
-    return `${namespace}['${key}'] = ${compiled}`  
+    return `${namespace}['${key}'] = ${compiled};`
   }
 };
