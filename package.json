@@ -1,13 +1,18 @@
 {
-  "name": "compile-underscore-tpl",
-  "version": "0.0.1",
+  "name": "compile-tpl-underscore",
+  "version": "0.0.2",
   "description": "Compile underscore template file.",
   "scripts": {
     "test-raw": "test/test.sh",
     "test": "TEST=1 mocha"
   },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/carltonf/compile-tpl-underscore.git"
+  },
   "main": "index.js",
-  "author": "Carl Xiong(xiongc05@gmail.com)",
+  "author": "Carl Xiong <xiongc05@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">= 4.0.0"
